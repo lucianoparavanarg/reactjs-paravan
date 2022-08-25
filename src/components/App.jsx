@@ -1,10 +1,14 @@
 import './App.css';
-import NavBar from './NavBar';
+import NavBar from './NavBar/NavBar';
+import { BiCart } from 'react-icons/bi';
+import { ItemListContainer } from './ItemListContainer/ItemListContainer';
 
-NavBar
 function App() {
   return (
-    <NavBar/>
+    <div className='App'>
+      <NavBar/>
+      <ItemListContainer/>
+    </div>
   );
 }
 

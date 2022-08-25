@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { BiCart } from 'react-icons/bi';
+import { CartWidget } from '../CartWidget/CartWidget';
 const NavBar = () => {
     return (
         <>
@@ -19,6 +20,7 @@ const NavBar = () => {
                 </li>
                 </ul>
             </div>
+            <CartWidget/>
             </div>
         </nav>
         </>
