@@ -1,3 +1,29 @@
+body{
+    background-image: url("../img/jw_wallpaper.jpg");
+    background-size: cover;
+    color: #fafafa;
+}
+
+.counter-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 0.2px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.37);
+    margin:10px;
+    -webkit-backdrop-filter: blur( 4px );
+    width: 300px;
+    height: 250px;
+    color: black;
+}
+
+.btn-m{
+    margin: 0.4rem;
+}
 .icono{
     font-size: 30px;
 }
