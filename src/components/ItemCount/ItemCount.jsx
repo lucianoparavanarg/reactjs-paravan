@@ -20,7 +20,6 @@ export const ItemCount = ({stock, onAdd}) => {
     }
 
   return (
-    <div>
         <div className='counter-box'>
             <h3 className='my-2'>Counter</h3>
             <p>Stock: {stock}</p>
@@ -35,6 +34,5 @@ export const ItemCount = ({stock, onAdd}) => {
               <button className='btn btn-primary btn-m' onClick={() => onAdd(count)}>Confirmar</button>
             </div>
         </div>
-    </div>
   )
 }
