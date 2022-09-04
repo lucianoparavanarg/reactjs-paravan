@@ -1,11 +1,14 @@
 import React from 'react'
-import productosdata from '../../data/productosdata';
 import { Item } from '../Item.jsx/Item'
-export const ItemList = ({list}) => {
+export const ItemList = ({products}) => {
+  
+  const productsList = products;
+  console.log(productsList)
+
   return (
-    <div>
-      {list.map((productosdata)=> (
-          <Item producto={productosdata} key={productosdata.id}/>
+    <div className='row m-2'>
+      {productsList.map((productosdata)=> (
+          <Item product={productosdata} key={productosdata.id}/>
       ))}
     </div>
     

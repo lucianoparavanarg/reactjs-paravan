@@ -1,14 +1,17 @@
 import React from 'react'
-import productosdata from '../../data/productosdata'
 
-export const Item = ({productosdata}) => {
+export const Item = ({product}) => {
   return (
-    <div className="card border-primary mb-3" key={productosdata.id} style={{maxWidth: '15rem', margin: '10px'}}>
-    <div className="card-header">{productosdata.nombre}</div>
+    <div className="card border-primary mb-3" 
+    key={product.id} 
+    style={{maxWidth: '15rem', margin: '10px', color: 'black'}}
+    >
+    
+    <div className="card-header">{product.nombre}</div>
     <div className="card-body">
-        <h4 className="card-title">{productosdata.precio}</h4>
-        <p className="card-text">{productosdata.marca}</p>
-        <p className="card-text">{productosdata.stock}</p>
+        <h5 className="card-title">Precio: {product.precio}</h5>
+        <p className="card-text">Marca: {product.marca}</p>
+        <p className="card-text">Stock: {product.stock}</p>
     </div>
     </div>
   )
