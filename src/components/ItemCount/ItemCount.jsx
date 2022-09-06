@@ -21,9 +21,10 @@ export const ItemCount = ({stock, onAdd}) => {
 
   return (
         <div className='counter-box'>
-            <h3 className='my-2'>Counter</h3>
-            <p>Stock: {stock}</p>
-            <p>Cantidad: {count}</p>
+            {//<h3 className='my-2'>Counter</h3>
+            //<p>Stock: {stock}</p>
+            //<p>Cantidad: {count}</p>
+          }
 
             <div>
                 <button className='btn btn-outline-danger btn-m' onClick={substract}> - </button>
