@@ -13,6 +13,7 @@ export const Item = ({product}) => {
         <p className="card-text">Marca: {product.marca}</p>
         <p className="card-text">Stock: {product.stock}</p>
     </div>
+      <button type="button" className="btn btn-primary btn-sm">Detalles</button>
     </div>
   )
 }
