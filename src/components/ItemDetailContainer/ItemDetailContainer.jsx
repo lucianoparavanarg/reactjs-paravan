@@ -6,15 +6,16 @@ export const ItemDetailContainer = () => {
     const [Item, setItem] = useState({})
 
     const getProduct = () => new Promise((res, rej) => {
-        setTimeout(() => res(productosdata.find(producto => producto.id === 1)), 2000)
+        setTimeout(() => res(productosdata.find(producto => producto.id)), 2000);
     })
 
     useEffect(() => {
         getProduct()
         .then(res => setItem(res))
+        .catch(error => console.error(error))
     }, [])
 
   return (
-    <ItemDetail product={productosdata}/>
+    <ItemDetail product={Item}/>
   )
 }

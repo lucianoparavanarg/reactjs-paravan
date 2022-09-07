@@ -9,7 +9,7 @@ export const ItemListContainer = () => {
   }
 
   const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  //const [isLoading, setIsLoading] = useState(true);
 
 
   useEffect(() => {
@@ -22,13 +22,13 @@ export const ItemListContainer = () => {
       getProductosData
       .then((response)=> setProducts(response))
       .catch(error => console.error(error))
-      .finally(() => setIsLoading(false));
+  //    .finally(() => setIsLoading(false));
   }, []);
 
   return (
     <div>
       <h1 className='my-5'>Nuestros Productos</h1>
-      <ItemList products={productosdata}/>
+      <ItemList products={products}/>
       <ItemCount stock={8} onAdd={onAdd}/>
     </div>
   )

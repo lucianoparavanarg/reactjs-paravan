@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { ItemCount } from '../ItemCount/ItemCount'
-import productosdata from '../../data/productosdata'
 import './ItemDetail.css'
 
 
@@ -22,9 +21,9 @@ export const ItemDetail = ({product}) => {
             <rect width="100%" height="100%" fill="#868e96" />
             <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
         </svg>
-            <p className="card-text">{product.precio}</p>
-            <p className="card-text">{product.marca}</p>
-            <p className="card-text">{product.stock}</p>
+            <p className="card-text">Precio: ${product.precio}</p>
+            <p className="card-text">Marca: {product.marca}</p>
+            <p className="card-text">Stock: {product.stock}</p>
             <ItemCount stock={product.stock} onAdd={onAdd} />
         <div className="card-footer text-muted">
             

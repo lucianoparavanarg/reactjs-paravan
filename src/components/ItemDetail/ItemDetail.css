@@ -1,4 +1,6 @@
 .cardStyle {
-    width: 50%;
+    display: flex;
+    width: 40%;
     color: black;
+    align-items: center;
 }
