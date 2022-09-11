@@ -1,38 +1,41 @@
 import { React, useState, useEffect } from 'react'
-import { ItemCount } from '../ItemCount/ItemCount'
-import { ItemList } from '../ItemList.jsx/ItemList'
-import productosdata from '../../data/productosdata'
-import { useParams } from 'react-router-dom'
-
+//import { ItemCount } from '../ItemCount/ItemCount'
+//import { ItemList } from '../ItemList.jsx/ItemList'
+import { Link } from 'react-router-dom'
+import './ItemListContainer.css'
 export const ItemListContainer = () => {
-  function onAdd(count){
-    console.log(`Se seleccionaron ${count} productos`)
-  }
+  
+  const [products, setProducts] = useState([])
 
-  const [products, setProducts] = useState([]);
-  //const [isLoading, setIsLoading] = useState(true);
-
-  const {categoria} = useParams()
-  useEffect(() => {
-      const getProductosData = new Promise((resolve, reject) => {
-        if(categoria) {
-          setTimeout(() => resolve(products.filter(productosdata = productosdata.categoria === categoria)), 2000)
-        } else {
-          setTimeout(() => resolve(products), 2000)
-        }
-      });
-
-      getProductosData
-      .then((response)=> setProducts(response))
-      .catch(error => console.error(error))
-  //    .finally(() => setIsLoading(false));
+  useEffect(()=> {
+    fetch("./json/productos.json")
+    .then(response => response.json())
+    .then(data => {
+      const productCard = data.map((products, indice)=>
+      <div className="card cardListStyle" key={indice} >
+          <img src={"./img/" + products.img} className="card-img-top" alt="..." style={{width:"auto", height:"200px"}}/>
+            <div className="card-body">
+              <h5 className="card-title">{products.nombre}</h5>
+              <p className="card-text">Marca: {products.marca}</p>
+              <p className="card-text">Modelo: {products.modelo}</p>
+              <p className="card-text">Precio: ${products.precio}</p>
+              <p className="card-text">Stock: {products.stock}</p>
+              <button className='btn btn-dark'><Link className='nav-link' to={"/productos/" + products.id}>Ver Productos</Link></button>
+            </div>
+      </div>
+      )
+      setProducts(productCard)
+    })
+    .catch(error => console.error(error))
   }, []);
 
   return (
-    <div>
+    <div className='row'>
       <h1 className='my-5'>Nuestros Productos</h1>
-      <ItemList products={products}/>
-      <ItemCount stock={8} onAdd={onAdd}/>
+      {products}
+      {//<ItemList products={products}/>
+      //<ItemCount stock={8} onAdd={onAdd}/>}
+      }
     </div>
   )
   

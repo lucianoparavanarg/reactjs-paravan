@@ -1,0 +1,92 @@
+[
+    {
+        "id": "1", 
+        "nombre": "Johnnie Walker - Red Label",
+        "marca": "JW",
+        "precio": 100,
+        "categoria": "whisky",
+        "stock": 100,
+        "img": "jw-red.jpg"
+    },
+    {
+        "id": "2",
+        "nombre": "Johnnie Walker - Black Label",
+        "marca": "JW",
+        "precio": 200,
+        "categoria": "whisky",
+        "stock": 100,
+        "img": "jw-black.jpg"
+    },
+    {
+        "id": "3",
+        "nombre": "Johnnie Walker - Double Black Label",
+        "marca": "JW",
+        "precio": 300,
+        "categoria": "whisky",
+        "stock": 100,
+        "img": "jw-doubleblack.jpg"
+    },
+    {
+        "id": "4",
+        "nombre": "Johnnie Walker - Gold Label",
+        "marca": "JW",
+        "precio": 400,
+        "categoria": "whisky",
+        "stock": 100,
+        "img": "jw-gold.jpg"
+    },
+    {
+        "id": "5",
+        "nombre": "Johnnie Walker - Green Label",
+        "marca": "JW",
+        "precio": 400,
+        "categoria": "whisky",
+        "stock": 100,
+        "img": "jw-green.jpg"
+    },
+    {
+        "id": "6",
+        "nombre": "Johnnie Walker - Blue Label",
+        "marca": "JW",
+        "precio": 400,
+        "categoria": "whisky",
+        "stock": 100,
+        "img": "jw-blue.jpg"
+    },
+    {
+        "id": "7",
+        "nombre": "Azul - Malbec",
+        "marca": "Azul",
+        "precio": 500,
+        "categoria": "vino",
+        "stock": 100,
+        "img": "azul-malbec.jpg"
+    },
+    {
+        "id": "8",
+        "nombre": "Luigi Bosca - Cabernet Sauvignon",
+        "marca": "EM",
+        "precio": 500,
+        "categoria": "vino",
+        "stock": 100,
+        "img": "LuigiBosca-CabernetSauvignon.jpg"
+    },
+    {
+        "id": "9",
+        "nombre": "Trumpeter Malbec",
+        "marca": "EM",
+        "precio": 500,
+        "categoria": "vino",
+        "stock": 100,
+        "img": "trumpeter-malbec.jpg"
+    },
+    {
+        "id": "10",
+        "nombre": "Trumpeter - Torrontes",
+        "marca": "EM",
+        "precio": 500,
+        "categoria": "vino",
+        "stock": 100,
+        "img": "trumpeter-torrontes.jpg"
+    }
+]

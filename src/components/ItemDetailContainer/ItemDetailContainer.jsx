@@ -1,25 +1,22 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
-import productosdata from '../../data/productosdata'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 
-export const ItemDetailContainer = () => {
-
+export const ItemDetailContainer = ({}) => {
+  const [productoCard, setProductoCard] = useState([])
   const {id} = useParams()
-
-    const [Item, setItem] = useState({})
-
-    const getProduct = () => new Promise((res, rej) => {
-        setTimeout(() => res(productosdata.find(product => product.id === Number(id))), 2000);
+  useEffect(()=>{
+    fetch("./json/productos.json")
+    .then(response => response.json())
+    .then(data => {
+      const productX = data.find(producto => producto.id === id)
+      setProductoCard(productX)
     })
-
-    useEffect(() => {
-        getProduct()
-        .then(res => setItem(res))
-        .catch(error => console.error(error))
-    }, [])
+  }, []);
 
   return (
-    <ItemDetail product={Item}/>
+    <>
+        <ItemDetail producto={productoCard}/>
+    </>
   )
 }
