@@ -12,13 +12,13 @@ const NavBar = () => {
                 <ul className="navbar-nav me-auto" style={{color: "white"}}>
                 
                     <Link to='/'>
-                        <li className="nav-item">Home</li>
+                        <li className="nav-link">Home</li>
                     </Link>
                     <Link to='/productos/'>
-                        <li className="nav-item">PRODUCTOS</li>
+                        <li className="nav-link">PRODUCTOS</li>
                     </Link>
                     <Link to='/contacto'>
-                        <li className="nav-item">CONTACTO</li>
+                        <li className="nav-link">CONTACTO</li>
                     </Link>
                     </ul>
 
