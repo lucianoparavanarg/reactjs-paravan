@@ -6,11 +6,12 @@ export const ItemDetailContainer = () => {
   const [productoCard, setProductoCard] = useState([])
   const {id} = useParams()
   useEffect(()=>{
-    fetch("./json/productos.json")
+    fetch("../json/productos.json")
     .then(response => response.json())
     .then(data => {
-      const productX = data.find(producto => producto.id === id)
+      const productX = data.find(productoCard => productoCard.id == id)
       setProductoCard(productX)
+    .catch(error => console.error(error))
     })
   }, []);
 

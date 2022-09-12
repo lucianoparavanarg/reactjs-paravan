@@ -1,14 +1,15 @@
 import React from 'react';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom'
+
 const NavBar = () => {
     return (
         <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary" >
             <div className="container-fluid">
             Tienda de bebidas
             <div className="collapse navbar-collapse" id="navbarColor01">
-                <ul className="navbar-nav me-auto">
+                <ul className="navbar-nav me-auto" style={{color: "white"}}>
                 
                     <Link to='/'>
                         <li className="nav-item">Home</li>

@@ -6,6 +6,7 @@ import './ItemDetail.css'
 
 export const ItemDetail = ({productoCard}) => {
     
+    
     const onAdd = (count) => {
         console.log(count)
     }
@@ -24,7 +25,7 @@ export const ItemDetail = ({productoCard}) => {
                     <p className="card-text">Marca: {productoCard.marca} </p>
                     <p className="card-text">Modelo: {productoCard.modelo} </p>
                     <p className="card-text">Precio: ${productoCard.precio} </p>
-                    <p className="card-text">Stock: ${productoCard.stock} </p>
+                    <p className="card-text">Stock: {productoCard.stock} </p>
                     <ItemCount stock={productoCard.stock} onAdd={onAdd} />
                     <button className='btn btn-dark'>Comprar</button>
                 </div>
