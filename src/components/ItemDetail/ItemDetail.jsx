@@ -1,16 +1,30 @@
-import React from 'react'
-import { ItemCount } from '../ItemCount/ItemCount'
+import React, { useState } from 'react'
+//import { ItemCount } from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 
 
 
 export const ItemDetail = ({productoCard}) => {
+    const [cantidad, setCantidad] = useState(1);
     
+    //{const onAdd = (count) => {console.log(count)}}
     
-    const onAdd = (count) => {
-        console.log(count)
+    function agregarAlCarrito(){
+        const productoCarrito = {id: productoCard.id, cantidad: 1}
+        console.log(productoCarrito)
     }
-    
+
+    const cantidadProducto = (operacion)=> {
+        if(operacion == "+") {
+            if(cantidad < productoCard.stock) {
+                setCantidad(cantidad + 1)
+            }
+        } else {
+            if(cantidad > 1) {
+                setCantidad(cantidad - 1)
+            }
+        }
+    }
 
   return (
     <>
@@ -26,8 +40,16 @@ export const ItemDetail = ({productoCard}) => {
                     <p className="card-text">Modelo: {productoCard.modelo} </p>
                     <p className="card-text">Precio: ${productoCard.precio} </p>
                     <p className="card-text">Stock: {productoCard.stock} </p>
-                    <ItemCount stock={productoCard.stock} onAdd={onAdd} />
-                    <button className='btn btn-dark'>Comprar</button>
+                    {//<ItemCount stock={productoCard.stock} onAdd={onAdd} />
+}
+                    <p>{cantidad}</p>
+                    <button className='btn btn-dark' onClick={() => cantidadProducto("-")}>
+                        -
+                    </button>
+                    <button className='btn btn-dark' onClick={() => cantidadProducto("+")}>
+                        +
+                    </button>
+                    <button className='btn btn-dark' onClick={() => agregarAlCarrito(productoCard)}>Comprar</button>
                 </div>
             </div>
         </div>

@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 
 export const ItemDetailContainer = () => {
-  const [productoCard, setProductoCard] = useState([])
+  const [productoCard, setProductoCard] = useState([]);
+  
+
   const {id} = useParams()
   useEffect(()=>{
     fetch("../json/productos.json")
