@@ -25,13 +25,13 @@ export const ItemDetail = ({productoCard}) => {
             }
         }
     }
-
+    
   return (
     <>
-         <div className="card mb-3" style={{maxWidth: '540px'}}>
+         <div className="card mb-3" style={{maxWidth: '540px', color: 'black'}}>
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={"../img/"+ productoCard.img} className="img-fluid rounded-start" alt="..." />
+                    <img src={"./img/"+ productoCard.img} className="img-fluid rounded-start" alt={productoCard.nombre} />
                 </div>
             <div className="col-md-8">
                 <div className="card-body">
@@ -49,8 +49,9 @@ export const ItemDetail = ({productoCard}) => {
                     <button className='btn btn-dark' onClick={() => cantidadProducto("+")}>
                         +
                     </button>
-                    <button className='btn btn-dark' onClick={() => agregarAlCarrito(productoCard)}>Comprar</button>
-                </div>
+                    <button className='btn btn-dark' onClick={() => agregarAlCarrito(productoCard, cantidad)}>Comprar</button>
+
+                    </div>
             </div>
         </div>
         </div>
