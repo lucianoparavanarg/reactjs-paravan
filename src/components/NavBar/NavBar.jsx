@@ -17,8 +17,11 @@ const NavBar = () => {
                     <Link to='/productos/'>
                         <li className="nav-link">PRODUCTOS</li>
                     </Link>
-                    <Link to='/contacto'>
-                        <li className="nav-link">CONTACTO</li>
+                    <Link to='/categoria/vino'>
+                        <li className="nav-link">VINO</li>
+                    </Link>
+                    <Link to='/categoria/whisky'>
+                        <li className="nav-link">WHISKY</li>
                     </Link>
                     </ul>
 

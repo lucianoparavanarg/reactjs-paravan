@@ -2,10 +2,13 @@ import { React, useState, useEffect } from 'react'
 //import { ItemCount } from '../ItemCount/ItemCount'
 //import { ItemList } from '../ItemList.jsx/ItemList'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import './ItemListContainer.css'
 export const ItemListContainer = () => {
   
   const [products, setProducts] = useState([])
+
+  const {categoria} = useParams()
 
   useEffect(()=> {
     fetch("./json/productos.json")
