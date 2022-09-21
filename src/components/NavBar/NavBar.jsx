@@ -11,7 +11,7 @@ const NavBar = () => {
             <div className="collapse navbar-collapse" id="navbarColor01">
                 <ul className="navbar-nav me-auto" style={{color: "white"}}>
                 
-                    <Link to='/'>
+                    <Link to='/productos'>
                         <li className="nav-link">Home</li>
                     </Link>
                     <Link to='/productos/'>

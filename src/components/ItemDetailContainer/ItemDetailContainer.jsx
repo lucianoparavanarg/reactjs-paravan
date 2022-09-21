@@ -8,11 +8,11 @@ export const ItemDetailContainer = () => {
   const {id} = useParams()
   
   useEffect(()=>{
-    fetch("./json/productos.json")
+    fetch("/json/productos.json")
     .then(response => response.json())
     .then(data => {
-      /*const productX = data.find(productoCard => productoCard.id === Number(id))
-      setProductoCard(productX)*/
+      const productX = data.find(productoCard => productoCard.id === Number(id))
+      setProductoCard(productX)
       console.log(data)
     })
     .catch(error => console.error(error))

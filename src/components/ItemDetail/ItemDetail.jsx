@@ -31,7 +31,7 @@ export const ItemDetail = ({productoCard}) => {
          <div className="card mb-3" style={{maxWidth: '540px', color: 'black'}}>
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={"./img/"+ productoCard.img} className="img-fluid rounded-start" alt={productoCard.nombre} />
+                    <img src={"/img/"+ productoCard.img} className="img-fluid rounded-start" alt={productoCard.nombre} />
                 </div>
             <div className="col-md-8">
                 <div className="card-body">
