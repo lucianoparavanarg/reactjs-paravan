@@ -17,8 +17,21 @@ export const ItemListContainer = () => {
       .then(response => response.json())
       .then(data => {
         if(categoria){
-          productCard = data.filter(products => products.categoria === categoria)
-          
+          const productCard = data.filter(products => products.categoria === categoria)=>{
+            <div className="card cardListStyle" key={indice} >
+            <img src={"./img/" + products.img} className="card-img-top" alt="..." style={{width:"auto", height:"200px"}}/>
+              <div className="card-body">
+                <h5 className="card-title">{products.nombre}</h5>
+                <p className="card-text">Marca: {products.marca}</p>
+                <p className="card-text">Modelo: {products.modelo}</p>
+                <p className="card-text">Precio: ${products.precio}</p>
+                <p className="card-text">Stock: {products.stock}</p>
+                <button className='btn btn-dark'><Link className='nav-link' to={"/productos/" + products.id}>Ver Productos</Link></button>
+              </div>
+        </div>
+        
+          }
+
         } else {
         const productCard = data.map((products, indice)=>
         <div className="card cardListStyle" key={indice} >
